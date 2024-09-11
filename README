@@ -1,0 +1,61 @@
+# C++ Algorithms: Longest Common Subsequence and Floyd-Warshall Algorithm
+
+## Description
+This project contains two C++ programs implementing important algorithms:
+1. **Longest Common Subsequence (LCS)** (`lcs.cpp`): Finds the Longest Common Subsequence between two strings and prints both the length of the LCS and the sequence itself.
+2. **Floyd-Warshall Algorithm** (`floyd.cpp`): Finds the shortest path between all pairs of nodes in a graph and prints the shortest path matrix and the shortest path lengths.
+
+## Files
+- **`lcs.cpp`**: Implements the LCS algorithm.
+- **`floyd.cpp`**: Implements the Floyd-Warshall algorithm.
+- **`Makefile`**: Compiles both programs.
+
+## Compilation and Execution
+
+A **Makefile** is provided to easily compile both programs.
+
+### Compile the Programs
+To compile both programs, use the `make` command:
+make
+
+This will generate the following executables:
+lcs: Runs the Longest Common Subsequence algorithm.
+floyd: Runs the Floyd-Warshall algorithm.
+Running the Programs
+LCS Program:
+./lcs string1 string2
+Example:
+./lcs ABCBDAB BDCAB
+The program will output the length of the Longest Common Subsequence and the LCS itself.
+Floyd-Warshall Algorithm:
+./floyd <graph-file>
+Example:
+./floyd graph-file.txt
+The program will read a graph from the input file and output the shortest path matrix and the shortest paths between nodes.
+
+## To remove the compiled executables, run:
+make clean
+
+## Input Format
+LCS Program
+The lcs program takes two strings as command-line arguments.
+
+## Floyd-Warshall Program
+The floyd program reads a graph from a file. The input file should contain the number of vertices followed by the adjacency matrix representing the graph.
+
+## Example of a graph file:
+Copy code
+4
+0 3 MAX_DISTANCE 7
+8 0 2 MAX_DISTANCE
+5 MAX_DISTANCE 0 1
+2 MAX_DISTANCE MAX_DISTANCE 0
+In this example, MAX_DISTANCE represents no direct path between nodes.
+
+Author
+Shanmukha Subrahmanyam Rallapalli
+
+License
+This project is licensed under the MIT License
+
+
